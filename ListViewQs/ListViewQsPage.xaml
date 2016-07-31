@@ -10,8 +10,14 @@
 							Orientation="Vertical"
 							Padding="16">
 						<Label Text="{Binding Title}"/>
+
 						<Button 
-							Text="Click me" 
+							Text="Click through Event Handler"
+							Clicked="Handle_Clicked"
+							/>
+
+						<Button 
+							Text="Click through Binding" 
 							Command="{Binding Source={x:Reference lstQs}, Path=BindingContext.ItemClickCommand}"
 							CommandParameter="{Binding}"/>
 					</StackLayout>
